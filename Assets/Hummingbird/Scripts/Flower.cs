@@ -93,4 +93,15 @@ public class Flower : MonoBehaviour
         flowerCollider.gameObject.SetActive(true);
         flowerMaterial.SetColor("_BaseColor", fullFlowerColor);
     }
+
+    private void Awake()
+    {
+        //find mesh renderer and get deafault material
+        MeshRenderer rend = GetComponent<MeshRenderer>();
+        flowerMaterial = rend.material;
+
+        //Flower and Nectar Colliders
+        flowerCollider = transform.Find("FlowerCollider").GetComponent<Collider>();
+        nectarCollider = transform.Find("FlowerNectarCollider").GetComponent<Collider>();
+    }
 }
