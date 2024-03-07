@@ -93,7 +93,7 @@ public class FlowerArea : MonoBehaviour
             {
                 //Not a cluster, look Flower
                 Flower flower = child.GetComponent<Flower>();
-                if (flowerPlants != null)
+                if (flower != null)
                 {
                     //Add to Flower list
                     Flowers.Add(flower);
